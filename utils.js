@@ -13,12 +13,12 @@ export const findMinRow = (arr) => {
   }
 
   mass_min_numbers.push(min_row);
-  let newmass = arr;
-  for (let i = 0; i < newmass.length; i++) {
-    for (let j = 0; j < newmass[i].length; j++) {
-      if (min_number === newmass[i][j]) {
+  // let newmass = arr;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (min_number === arr[i][j]) {
         mass_min_numbers.push(i);
-        newmass[i][j] = `${newmass[i][j]}*`;
+        // newmass[i][j] = `${newmass[i][j]}*`;
       }
     }
   }
@@ -29,6 +29,5 @@ export const findMinRow = (arr) => {
     minr: mass_min_numbers.filter((num, index) => {
       return mass_min_numbers.indexOf(num) === index;
     }),
-    newmass,
   };
 };
